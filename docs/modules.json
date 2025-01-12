@@ -4,6 +4,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "aacraid": {
             "description": "Dell PERC2, 2/Si, 3/Si, 3/Di, Adaptec Advanced Raid Products, HP NetRAID-4M, IBM ServeRAID & ICP SCSI driver (Compiled by RR for DSM)",
             "depends": ""
@@ -61,7 +69,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -305,7 +313,7 @@
             "depends": "fb,fbdev,font,bitblit"
         },
         "fbdev": {
-            "description": "Framebuffer console primary device detection (Compiled by RR for DSM)",
+            "description": "",
             "depends": ""
         },
         "font": {
@@ -643,6 +651,10 @@
         "nct6775": {
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
+        },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
         },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
@@ -1010,6 +1022,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "9p": {
             "description": "9P2000 filesystem support (Compiled by RR for DSM)",
             "depends": "9pnet"
@@ -1087,7 +1107,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -1351,7 +1371,7 @@
             "depends": "fb,fbdev,bitblit,font"
         },
         "fbdev": {
-            "description": "Framebuffer console primary device detection (Compiled by RR for DSM)",
+            "description": "",
             "depends": ""
         },
         "font": {
@@ -1734,6 +1754,10 @@
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
         },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
+        },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
             "depends": ""
@@ -2094,6 +2118,10 @@
             "description": "Montage Technology TS2020 - Silicon tuner driver module",
             "depends": "regmap-i2c"
         },
+        "tty0tty": {
+            "description": "tty0tty null modem driver",
+            "depends": ""
+        },
         "uhci-hcd": {
             "description": "USB Universal Host Controller Interface driver",
             "depends": "usbcore"
@@ -2224,6 +2252,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "aacraid": {
             "description": "Dell PERC2, 2/Si, 3/Si, 3/Di, Adaptec Advanced Raid Products, HP NetRAID-4M, IBM ServeRAID & ICP SCSI driver (Compiled by RR for DSM)",
             "depends": ""
@@ -2281,7 +2317,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -2811,6 +2847,10 @@
         "nct6775": {
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": ""
+        },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
         },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
@@ -3158,6 +3198,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "9p": {
             "description": "9P2000 filesystem support (Compiled by RR for DSM)",
             "depends": "9pnet"
@@ -3235,7 +3283,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -3830,6 +3878,10 @@
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": ""
         },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
+        },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
             "depends": ""
@@ -4186,6 +4238,10 @@
             "description": "Montage Technology TS2020 - Silicon tuner driver module",
             "depends": "regmap-i2c"
         },
+        "tty0tty": {
+            "description": "tty0tty null modem driver",
+            "depends": ""
+        },
         "uhci-hcd": {
             "description": "USB Universal Host Controller Interface driver",
             "depends": "usbcore"
@@ -4300,6 +4356,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "aacraid": {
             "description": "Dell PERC2, 2/Si, 3/Si, 3/Di, Adaptec Advanced Raid Products, HP NetRAID-4M, IBM ServeRAID & ICP SCSI driver (Compiled by RR for DSM)",
             "depends": ""
@@ -4357,7 +4421,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -4887,6 +4951,10 @@
         "nct6775": {
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": ""
+        },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
         },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
@@ -5234,6 +5302,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "9p": {
             "description": "9P2000 filesystem support (Compiled by RR for DSM)",
             "depends": "9pnet"
@@ -5311,7 +5387,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -5906,6 +5982,10 @@
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": ""
         },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
+        },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
             "depends": ""
@@ -6262,6 +6342,10 @@
             "description": "Montage Technology TS2020 - Silicon tuner driver module",
             "depends": "regmap-i2c"
         },
+        "tty0tty": {
+            "description": "tty0tty null modem driver",
+            "depends": ""
+        },
         "uhci-hcd": {
             "description": "USB Universal Host Controller Interface driver",
             "depends": "usbcore"
@@ -6376,6 +6460,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "aacraid": {
             "description": "Dell PERC2, 2/Si, 3/Si, 3/Di, Adaptec Advanced Raid Products, HP NetRAID-4M, IBM ServeRAID & ICP SCSI driver (Compiled by RR for DSM)",
             "depends": ""
@@ -6433,7 +6525,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -6963,6 +7055,10 @@
         "nct6775": {
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": ""
+        },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
         },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
@@ -7310,6 +7406,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "9p": {
             "description": "9P2000 filesystem support (Compiled by RR for DSM)",
             "depends": "9pnet"
@@ -7387,7 +7491,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -7982,6 +8086,10 @@
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": ""
         },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
+        },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
             "depends": ""
@@ -8338,6 +8446,10 @@
             "description": "Montage Technology TS2020 - Silicon tuner driver module",
             "depends": "regmap-i2c"
         },
+        "tty0tty": {
+            "description": "tty0tty null modem driver",
+            "depends": ""
+        },
         "uhci-hcd": {
             "description": "USB Universal Host Controller Interface driver",
             "depends": "usbcore"
@@ -8452,6 +8564,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "aacraid": {
             "description": "Dell PERC2, 2/Si, 3/Si, 3/Di, Adaptec Advanced Raid Products, HP NetRAID-4M, IBM ServeRAID & ICP SCSI driver (Compiled by RR for DSM)",
             "depends": ""
@@ -8509,7 +8629,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -9051,6 +9171,10 @@
         "nct6775": {
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": ""
+        },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
         },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
@@ -9394,6 +9518,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "9p": {
             "description": "9P2000 filesystem support (Compiled by RR for DSM)",
             "depends": "9pnet"
@@ -9471,7 +9603,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -10078,6 +10210,10 @@
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": ""
         },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
+        },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
             "depends": ""
@@ -10434,6 +10570,10 @@
             "description": "Montage Technology TS2020 - Silicon tuner driver module",
             "depends": "regmap-i2c"
         },
+        "tty0tty": {
+            "description": "tty0tty null modem driver",
+            "depends": ""
+        },
         "uhci-hcd": {
             "description": "USB Universal Host Controller Interface driver",
             "depends": "usbcore"
@@ -10544,6 +10684,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "aacraid": {
             "description": "Dell PERC2, 2/Si, 3/Si, 3/Di, Adaptec Advanced Raid Products, HP NetRAID-4M, IBM ServeRAID & ICP SCSI driver (Compiled by RR for DSM)",
             "depends": ""
@@ -10601,7 +10749,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -11148,6 +11296,10 @@
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
         },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
+        },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
             "depends": ""
@@ -11490,6 +11642,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "9p": {
             "description": "9P2000 filesystem support (Compiled by RR for DSM)",
             "depends": "9pnet"
@@ -11567,7 +11727,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -12178,6 +12338,10 @@
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
         },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
+        },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
             "depends": ""
@@ -12534,6 +12698,10 @@
             "description": "Montage Technology TS2020 - Silicon tuner driver module",
             "depends": "regmap-i2c"
         },
+        "tty0tty": {
+            "description": "tty0tty null modem driver",
+            "depends": ""
+        },
         "usbnet": {
             "description": "USB network driver framework",
             "depends": "usbcore,mii"
@@ -12644,6 +12812,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "9p": {
             "description": "9P2000 filesystem support (Compiled by RR for DSM)",
             "depends": "9pnet"
@@ -12729,8 +12905,8 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
-            "depends": ""
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
+            "depends": "crc-itu-t"
         },
         "ax88179_178a": {
             "description": "ASIX AX88179/178A based USB 3.0/2.0 Gigabit Ethernet Devices",
@@ -13431,6 +13607,10 @@
         "nct6775": {
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
+        },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
         },
         "net_failover": {
             "description": "Failover driver for Paravirtual drivers",
@@ -13964,6 +14144,10 @@
             "description": "TTM memory manager subsystem (for DRM device)",
             "depends": "dmabuf,drm"
         },
+        "tty0tty": {
+            "description": "tty0tty null modem driver",
+            "depends": ""
+        },
         "typec": {
             "description": "USB Type-C Connector Class",
             "depends": ""
@@ -14194,6 +14378,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "9p": {
             "description": "9P2000 filesystem support (Compiled by RR for DSM)",
             "depends": "9pnet"
@@ -14283,8 +14475,8 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
-            "depends": ""
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
+            "depends": "crc-itu-t"
         },
         "ax88179_178a": {
             "description": "ASIX AX88179/178A based USB 3.0/2.0 Gigabit Ethernet Devices",
@@ -14989,6 +15181,10 @@
         "nct6775": {
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
+        },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
         },
         "net_failover": {
             "description": "Failover driver for Paravirtual drivers",
@@ -15526,6 +15722,10 @@
             "description": "TTM memory manager subsystem (for DRM device)",
             "depends": "dmabuf,drm"
         },
+        "tty0tty": {
+            "description": "tty0tty null modem driver",
+            "depends": ""
+        },
         "typec": {
             "description": "USB Type-C Connector Class",
             "depends": ""
@@ -15757,6 +15957,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "aacraid": {
             "description": "Dell PERC2, 2/Si, 3/Si, 3/Di, Adaptec Advanced Raid Products, HP NetRAID-4M, IBM ServeRAID & ICP SCSI driver (Compiled by RR for DSM)",
             "depends": ""
@@ -15810,7 +16018,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -16046,7 +16254,7 @@
             "depends": "fb,fbdev,font,bitblit"
         },
         "fbdev": {
-            "description": "Framebuffer console primary device detection (Compiled by RR for DSM)",
+            "description": "",
             "depends": ""
         },
         "font": {
@@ -16385,8 +16593,16 @@
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
         },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
+        },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
+            "depends": ""
+        },
+        "pcspeaker": {
+            "description": "PC Speaker Platform Device Module (Compiled by RR for DSM)",
             "depends": ""
         },
         "pcspkr": {
@@ -16747,6 +16963,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "9p": {
             "description": "9P2000 filesystem support (Compiled by RR for DSM)",
             "depends": "9pnet"
@@ -16820,7 +17044,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -17076,7 +17300,7 @@
             "depends": "fb,fbdev,bitblit,font"
         },
         "fbdev": {
-            "description": "Framebuffer console primary device detection (Compiled by RR for DSM)",
+            "description": "",
             "depends": ""
         },
         "font": {
@@ -17459,6 +17683,10 @@
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
         },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
+        },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
             "depends": ""
@@ -17470,6 +17698,10 @@
         "p8022": {
             "description": "802.2 datalink support (Compiled by RR for DSM)",
             "depends": "llc"
+        },
+        "pcspeaker": {
+            "description": "PC Speaker Platform Device Module (Compiled by RR for DSM)",
+            "depends": ""
         },
         "pcspkr": {
             "description": "PC Speaker beeper driver",
@@ -17815,6 +18047,10 @@
             "description": "Montage Technology TS2020 - Silicon tuner driver module",
             "depends": "regmap-i2c"
         },
+        "tty0tty": {
+            "description": "tty0tty null modem driver",
+            "depends": ""
+        },
         "uhci-hcd": {
             "description": "USB Universal Host Controller Interface driver",
             "depends": "usbcore"
@@ -17945,6 +18181,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "aacraid": {
             "description": "Dell PERC2, 2/Si, 3/Si, 3/Di, Adaptec Advanced Raid Products, HP NetRAID-4M, IBM ServeRAID & ICP SCSI driver (Compiled by RR for DSM)",
             "depends": ""
@@ -18002,7 +18246,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -18553,6 +18797,10 @@
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": ""
         },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
+        },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
             "depends": ""
@@ -18895,6 +19143,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "9p": {
             "description": "9P2000 filesystem support (Compiled by RR for DSM)",
             "depends": "9pnet"
@@ -18972,7 +19228,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -19587,6 +19843,10 @@
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": ""
         },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
+        },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
             "depends": ""
@@ -19943,6 +20203,10 @@
             "description": "Montage Technology TS2020 - Silicon tuner driver module",
             "depends": "regmap-i2c"
         },
+        "tty0tty": {
+            "description": "tty0tty null modem driver",
+            "depends": ""
+        },
         "usbnet": {
             "description": "USB network driver framework",
             "depends": "usbcore,mii"
@@ -20053,6 +20317,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "aacraid": {
             "description": "Dell PERC2, 2/Si, 3/Si, 3/Di, Adaptec Advanced Raid Products, HP NetRAID-4M, IBM ServeRAID & ICP SCSI driver (Compiled by RR for DSM)",
             "depends": ""
@@ -20106,7 +20378,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -20676,6 +20948,10 @@
         "nct6775": {
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
+        },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
         },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
@@ -21023,6 +21299,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "9p": {
             "description": "9P2000 filesystem support (Compiled by RR for DSM)",
             "depends": "9pnet"
@@ -21096,7 +21380,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -21731,6 +22015,10 @@
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
         },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
+        },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
             "depends": ""
@@ -22091,6 +22379,10 @@
             "description": "Montage Technology TS2020 - Silicon tuner driver module",
             "depends": "regmap-i2c"
         },
+        "tty0tty": {
+            "description": "tty0tty null modem driver",
+            "depends": ""
+        },
         "usbnet": {
             "description": "USB network driver framework",
             "depends": "usbcore,mii"
@@ -22201,6 +22493,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "aacraid": {
             "description": "Dell PERC2, 2/Si, 3/Si, 3/Di, Adaptec Advanced Raid Products, HP NetRAID-4M, IBM ServeRAID & ICP SCSI driver (Compiled by RR for DSM)",
             "depends": ""
@@ -22258,7 +22558,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -22832,6 +23132,10 @@
         "nct6775": {
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
+        },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
         },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
@@ -23183,6 +23487,14 @@
             "description": "RealTek RTL-8139C+ series 10/100 PCI Ethernet driver",
             "depends": "mii"
         },
+        "8139too": {
+            "description": "RealTek RTL-8139 Fast Ethernet driver",
+            "depends": "mii"
+        },
+        "8390": {
+            "description": "",
+            "depends": ""
+        },
         "9p": {
             "description": "9P2000 filesystem support (Compiled by RR for DSM)",
             "depends": "9pnet"
@@ -23260,7 +23572,7 @@
             "depends": ""
         },
         "atlantic": {
-            "description": "Marvell (Aquantia) Corporation(R) Network Driver",
+            "description": "Marvell (Aquantia) Corporation(R) Network Driver (Compiled by RR for DSM)",
             "depends": "crc-itu-t"
         },
         "auxiliary": {
@@ -23899,6 +24211,10 @@
             "description": "Driver for NCT6775F and compatible chips (Compiled by RR for DSM)",
             "depends": "hwmon-vid"
         },
+        "ne2k-pci": {
+            "description": "PCI NE2000 clone driver",
+            "depends": "8390"
+        },
         "netxen_nic": {
             "description": "QLogic/NetXen (1/10) GbE Intelligent Ethernet Driver",
             "depends": ""
@@ -24262,6 +24578,10 @@
         "ts2020": {
             "description": "Montage Technology TS2020 - Silicon tuner driver module",
             "depends": "regmap-i2c"
+        },
+        "tty0tty": {
+            "description": "tty0tty null modem driver",
+            "depends": ""
         },
         "usbnet": {
             "description": "USB network driver framework",

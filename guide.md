@@ -65,7 +65,7 @@
 * RR 备份 (Any version):
     ```shell
     # 备份为 disk.img.gz, 自行导出.
-    dd if=`blkid | grep 'LABEL="RR3"' | cut -d3 -f1` | gzip > disk.img.gz
+    dd if="$(blkid | grep 'LABEL="RR3"' | cut -d3 -f1)" | gzip > disk.img.gz
     # 结合 transfer.sh 直接导出链接
     curl -skL --insecure -w '\n' --upload-file disk.img.gz https://transfer.sh
     ```
@@ -73,7 +73,7 @@
 * RR 开机强行进入到 RR shell:
     ```shell
     # 在 wait IP 的时候, 快速的连上, 杀死 boot.sh 进程.
-    kill `ps | grep -v grep | grep boot.sh | awk '{print $1}'`
+    kill $(ps | grep -v grep | grep boot.sh | awk '{print $1}')
     ```
 
 # SYNO:
@@ -109,7 +109,7 @@
     SN=xxxxxxxxxx   # 输入你要设置的SN
     echo 1 > /proc/sys/kernel/syno_install_flag
     [ -b "/dev/synoboot1" ] && (mkdir -p /tmp/synoboot1; mount /dev/synoboot1 /tmp/synoboot1)
-    [ -f "/tmp/synoboot1/user-config.yml" ] && OLD_SN=`grep '^sn:' /tmp/synoboot1/user-config.yml | sed -r 's/sn:(.*)/\1/; s/[\" ]//g'`
+    [ -f "/tmp/synoboot1/user-config.yml" ] && OLD_SN=$(sed -E 's/^sn:(.*)/\1/; s/[\" ]//g' /tmp/synoboot1/user-config.yml)
     [ -n "${OLD_SN}" ] && sed -i "s/${OLD_SN}/${SN}/g" /tmp/synoboot1/user-config.yml
     reboot
     ```
@@ -128,6 +128,14 @@
 * 群晖 python pip 包管理:
     ```shell
     curl -#kL https://bootstrap.pypa.io/get-pip.py | python3
+    ```
+* virt-what (MEV):
+    ```shell
+    kvm          ---- Proxmox VE / Unraid  ...
+    qemu         ---- QEMU (windows)
+    vmware       ---- VMware / VMware ESXi
+    parallels    ---- Parallels Desktop
+    virtualbox   ---- VirtualBox
     ```
 
 ## DEBUG
@@ -180,7 +188,7 @@
   lspci -d ::104                                   # 查看 RAID 总线控制器
   lspci -d ::105                                   # 查看 ATA 总线控制器
   lspci -d ::106                                   # 查看 SATA 总线控制器
-  lspci -d ::107                                   # 查看 串行 Attached SCSI
+  lspci -d ::107                                   # 查看 SAS 总线控制器
   lspci -d ::108                                   # 查看 NVM 控制器
 
   ls -l /sys/class/scsi_host                       # 查看 ATA 硬盘 host 信息
