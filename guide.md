@@ -6,6 +6,7 @@
    * sftp 工具 WinSCP (下载: https://winscp.net/eng/index.php)
    * 文本编辑工具 Notepad3 (下载: https://github.com/rizonesoft/Notepad3/releases)
    * 镜像写盘工具 Rufus (下载: https://rufus.ie/zh/)
+   * 镜像转换工具 qemu-img (下载: https://cloudbase.it/qemu-img-windows/)
    * 镜像转换工具 StarWind V2V Image Converter (下载: https://www.starwindsoftware.com/starwind-v2v-converter)
    * 磁盘管理工具 Diskgenius (下载: https://www.diskgenius.com/)
 
@@ -33,12 +34,33 @@
      * https://dataupdate7.synology.com/toolchain/v1/get_download_list?identify=toolkit&version=7.2&platform=purley
 
 # 安装条件
-  1. 引导盘：当前支持 SATA/SCSI/NVME/MMC/IDE or USB 设备, 且要大于 2GB. (SCSI比较复杂, 并不是全部可用)
-  2. 安装盘: 至少需要1个SATA接口硬盘 或者 1个 MMC 作为存储设备. 且要大于 32GB 才可创建存储池.
+  1. 引导盘：当前支持 SATA/SCSI/NVME/MMC/IDE or USB 设备, 且要大于 2GB. (SCSI 比较复杂, 并不是全部可用)
+  2. 安装盘: 至少需要 1 个 SATA 接口硬盘(DT 型号支持 NVME 安装) 或者 1 个 MMC 作为存储设备. 且要大于 32GB 才可创建存储池.
   3. 内存: 需要大于 4GB.
-  4. DT的型号目前不支持HBA扩展卡(较新版本的RR引导 SA6400 支持).
-  5. NVME的PCIPATH有两种格式, 单层路径的兼容 DT 的型号, 多层路径的兼容 DS918+ 等型号.
+  4. DT 的型号目前不支持 HBA 扩展卡(较新版本的RR引导 SA6400 支持).
+  5. NVME 的 PCIPATH 有两种格式, 单层深度路径的仅兼容 DT 的型号, 多层深度路径的兼容 DT 和非 DT 等型号.
   
+# 镜像格式
+  ```shell
+  # 安装 qemu-img
+  # https://cloudbase.it/qemu-img-windows/     # Windows
+  # apt install qemu-img                       # Debian/Ubuntu
+  # yum install qemu-img                       # CentOS
+  # brew install qemu-img                      # MacOS
+
+  # img to vmdk (VMWare / ESXi6 / ESXi7)
+  qemu-img convert -O vmdk -o adapter_type=lsilogic,subformat=streamOptimized,compat6 rr.img rr.vmdk
+
+  # img to vmdk (ESXi8)
+  qemu-img convert -O vmdk -o adapter_type=lsilogic,subformat=monolithicFlat,compat6 rr.img rr.vmdk
+
+  # img to vhdx (Hyper-V)
+  qemu-img convert -O vhdx -o subformat=dynamic rr.img rr.vhdx
+
+  # img to vhd (Parallels Desktop)
+  qemu-img convert -O vpc rr.img rr.vhd
+  ```
+
 
 # GPU
 * vGPU: https://blog.kkk.rs/
@@ -65,7 +87,7 @@
 * RR 备份 (Any version):
     ```shell
     # 备份为 disk.img.gz, 自行导出.
-    dd if=`blkid | grep 'LABEL="RR3"' | cut -d3 -f1` | gzip > disk.img.gz
+    dd if="$(blkid | grep 'LABEL="RR3"' | cut -d3 -f1)" | gzip > disk.img.gz
     # 结合 transfer.sh 直接导出链接
     curl -skL --insecure -w '\n' --upload-file disk.img.gz https://transfer.sh
     ```
@@ -73,7 +95,7 @@
 * RR 开机强行进入到 RR shell:
     ```shell
     # 在 wait IP 的时候, 快速的连上, 杀死 boot.sh 进程.
-    kill `ps | grep -v grep | grep boot.sh | awk '{print $1}'`
+    kill $(ps | grep -v grep | grep boot.sh | awk '{print $1}')
     ```
 
 # SYNO:
@@ -109,7 +131,7 @@
     SN=xxxxxxxxxx   # 输入你要设置的SN
     echo 1 > /proc/sys/kernel/syno_install_flag
     [ -b "/dev/synoboot1" ] && (mkdir -p /tmp/synoboot1; mount /dev/synoboot1 /tmp/synoboot1)
-    [ -f "/tmp/synoboot1/user-config.yml" ] && OLD_SN=`grep '^sn:' /tmp/synoboot1/user-config.yml | sed -r 's/sn:(.*)/\1/; s/[\" ]//g'`
+    [ -f "/tmp/synoboot1/user-config.yml" ] && OLD_SN=$(sed -E 's/^sn:(.*)/\1/; s/[\" ]//g' /tmp/synoboot1/user-config.yml)
     [ -n "${OLD_SN}" ] && sed -i "s/${OLD_SN}/${SN}/g" /tmp/synoboot1/user-config.yml
     reboot
     ```
@@ -128,6 +150,14 @@
 * 群晖 python pip 包管理:
     ```shell
     curl -#kL https://bootstrap.pypa.io/get-pip.py | python3
+    ```
+* virt-what (MEV):
+    ```shell
+    kvm          ---- Proxmox VE / Unraid  ...
+    qemu         ---- QEMU (windows)
+    vmware       ---- VMware / VMware ESXi
+    parallels    ---- Parallels Desktop
+    virtualbox   ---- VirtualBox
     ```
 
 ## DEBUG
@@ -180,7 +210,7 @@
   lspci -d ::104                                   # 查看 RAID 总线控制器
   lspci -d ::105                                   # 查看 ATA 总线控制器
   lspci -d ::106                                   # 查看 SATA 总线控制器
-  lspci -d ::107                                   # 查看 串行 Attached SCSI
+  lspci -d ::107                                   # 查看 SAS 总线控制器
   lspci -d ::108                                   # 查看 NVM 控制器
 
   ls -l /sys/class/scsi_host                       # 查看 ATA 硬盘 host 信息
